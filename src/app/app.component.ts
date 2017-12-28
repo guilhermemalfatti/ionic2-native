@@ -3,9 +3,7 @@ import { Nav, Platform } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
-import { HomePage } from '../pages/home/home';
-import { VibrationPage } from '../pages/vibration/vibration';
-import { GeolocationPage } from '../pages/geolocation/geolocation';
+import { HomePage, CameraPage, VibrationPage, GeolocationPage } from '../pages/pages';
 
 @Component({
   templateUrl: 'app.html'
@@ -24,6 +22,7 @@ export class MyApp {
     this.pages = [
       { title: 'Home', component: HomePage  },
       { title: 'Vibration', component: VibrationPage},
+      { title: 'Camera', component: CameraPage},
       { title: 'Geolocation', component: GeolocationPage }
     ];
 

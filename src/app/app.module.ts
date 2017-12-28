@@ -6,10 +6,10 @@ import { Vibration } from '@ionic-native/vibration';
 import { Geolocation } from '@ionic-native/geolocation';
 
 import { MyApp } from './app.component';
-import { HomePage } from '../pages/home/home';
-import { VibrationPage } from '../pages/vibration/vibration';
-import { GeolocationPage } from '../pages/geolocation/geolocation';
+import { HomePage, CameraPage, VibrationPage, GeolocationPage } from '../pages/pages';
 
+
+import { Camera } from '@ionic-native/camera';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
@@ -18,7 +18,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     MyApp,
     HomePage,
     GeolocationPage,
-    VibrationPage
+    VibrationPage,
+    CameraPage
   ],
   imports: [
     BrowserModule,
@@ -29,13 +30,16 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     MyApp,
     HomePage,
     GeolocationPage,
-    VibrationPage
+    VibrationPage,
+    CameraPage,
+    
   ],
   providers: [
     StatusBar,
     Vibration,
     SplashScreen,
     Geolocation,
+    Camera,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })
