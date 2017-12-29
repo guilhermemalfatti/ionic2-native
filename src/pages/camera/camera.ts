@@ -33,7 +33,7 @@ export class CameraPage {
       encodingType: this.camera.EncodingType.PNG,
       targetHeight: 500,
       targetWidth: 500,
-      saveToPhotoAlbum: true
+      saveToPhotoAlbum: false
     };
 
     this.camera.getPicture(options).then((imageUri) => {

@@ -4,9 +4,10 @@ import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 
 import { Vibration } from '@ionic-native/vibration';
 import { Geolocation } from '@ionic-native/geolocation';
+import { BarcodeScanner } from '@ionic-native/barcode-scanner';
 
 import { MyApp } from './app.component';
-import { HomePage, CameraPage, VibrationPage, GeolocationPage } from '../pages/pages';
+import { HomePage, CameraPage, VibrationPage, GeolocationPage, BarcodePage } from '../pages/pages';
 
 
 import { Camera } from '@ionic-native/camera';
@@ -19,7 +20,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     HomePage,
     GeolocationPage,
     VibrationPage,
-    CameraPage
+    CameraPage,
+    BarcodePage
   ],
   imports: [
     BrowserModule,
@@ -32,13 +34,14 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     GeolocationPage,
     VibrationPage,
     CameraPage,
-    
+    BarcodePage
   ],
   providers: [
     StatusBar,
     Vibration,
     SplashScreen,
     Geolocation,
+    BarcodeScanner,
     Camera,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
