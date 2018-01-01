@@ -7,12 +7,13 @@ import { Geolocation } from '@ionic-native/geolocation';
 import { BarcodeScanner } from '@ionic-native/barcode-scanner';
 
 import { MyApp } from './app.component';
-import { HomePage, CameraPage, VibrationPage, GeolocationPage, BarcodePage, DeviceMotionPage } from '../pages/pages';
+import { HomePage, CameraPage, VibrationPage, GeolocationPage, BarcodePage, DeviceMotionPage, LocalNotificationsPage } from '../pages/pages';
 
 
 import { Camera } from '@ionic-native/camera';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
+import { LocalNotifications } from '@ionic-native/local-notifications';
 
 import { DeviceMotion} from '@ionic-native/device-motion';
 
@@ -24,7 +25,8 @@ import { DeviceMotion} from '@ionic-native/device-motion';
     VibrationPage,
     CameraPage,
     DeviceMotionPage,
-    BarcodePage
+    BarcodePage,
+    LocalNotificationsPage
   ],
   imports: [
     BrowserModule,
@@ -38,7 +40,8 @@ import { DeviceMotion} from '@ionic-native/device-motion';
     VibrationPage,
     CameraPage,
     DeviceMotionPage,
-    BarcodePage    
+    BarcodePage,
+    LocalNotificationsPage
   ],
   providers: [
     StatusBar,
@@ -48,6 +51,7 @@ import { DeviceMotion} from '@ionic-native/device-motion';
     BarcodeScanner,
     Camera,
     DeviceMotion,
+    LocalNotifications,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })

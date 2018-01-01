@@ -3,7 +3,7 @@ import { Nav, Platform } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
-import { HomePage, CameraPage, VibrationPage, GeolocationPage, BarcodePage, DeviceMotionPage} from '../pages/pages';
+import { HomePage, CameraPage, VibrationPage, GeolocationPage, BarcodePage, DeviceMotionPage, LocalNotificationsPage} from '../pages/pages';
 
 @Component({
   templateUrl: 'app.html'
@@ -25,7 +25,8 @@ export class MyApp {
       { title: 'Camera', component: CameraPage},
       { title: 'Geolocation', component: GeolocationPage },
       { title: 'BarCode-Scanner', component: BarcodePage },
-      { title: 'Device-Motion', component: DeviceMotionPage }
+      { title: 'Device-Motion', component: DeviceMotionPage },
+      { title: 'Local Notifications', component: LocalNotificationsPage }
     ];
 
   }
